@@ -14,4 +14,5 @@ io.on('connection', socket => {
   console.log('a socket connected');
 
   socket.on('disconnect', () => console.log('a socket disconnected'));
+  socket.on('chat-message', message => console.log(`message:`, message));
 });

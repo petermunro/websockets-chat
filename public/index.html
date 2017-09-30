@@ -3,9 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>WebSockets Chat</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
   <body>
-    <h1>Hi</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="col-xs-12">Chat</h1>
+      </div>
+      <div class="row" id="messages">
+        <div id="chats">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12">
+          <label for="username" class="sr-only">Username:</label>
+          <input type="text" id="username" class="form-control" placeholder="Enter your username">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <form>
+            <div class="input-group">
+              <input type="text" id="message" class="form-control input" placeholder="Enter your message">
+              <span class="input-group-btn">
+                <button id="send" class="btn btn-primary">Send</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/chat.js"></script>
   </body>
