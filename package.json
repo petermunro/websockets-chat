@@ -4,13 +4,14 @@
   "description": "Real-time chat using WebSockets",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Peter Munro <peter@petermunro.org>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "socket.io": "^2.0.3"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
