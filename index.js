@@ -18,4 +18,8 @@ io.on('connection', socket => {
     console.log(`message:`, message);
     io.emit('chat-message', message);
   });
+  socket.on('typing-update', ({username, isTyping}) => {
+    console.log(`${username} is ${isTyping ? '' : 'no longer'} typing`);
+    io.emit('typing-update', {username, isTyping});
+  });
 });
