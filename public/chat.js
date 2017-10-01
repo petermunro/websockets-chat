@@ -5,6 +5,7 @@ let socket = io.connect();
 // select DOM elements
 let usernameField = document.getElementById('username');
 let messageField = document.getElementById('message');
+let messages = document.getElementById('messages');
 let form = document.getElementsByTagName('form')[0];
 
 
@@ -23,4 +24,10 @@ form.addEventListener('submit', e => {
   });
   messageField.value = '';
   e.preventDefault();
+});
+
+
+// handle messages received from the server
+socket.on('chat-message', message => {
+  messages.insertAdjacentHTML('beforeEnd', `<p>${message.username}: ${message.message}</p>`);
 });
